@@ -47,15 +47,6 @@ function is_subpage() {
 
 remove_action( 'wp_head', 'wp_generator' );
 
-// WordPress Menus
-
-add_action( 'init', 'register_my_menu' );
-
-function register_my_menu() {
-	register_nav_menu( 'main-menu', __( 'Main Menu' ) );
-	register_nav_menu( 'footer-menu', __( 'Footer Menu' ) );
-}
-
 // Add Dashboard Widget
 
 add_action('wp_dashboard_setup', 'my_custom_dashboard_widgets');

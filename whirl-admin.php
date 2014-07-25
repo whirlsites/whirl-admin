@@ -5,7 +5,7 @@
  * Description: This plugin is required for all Whirl Sites clients and adds special site functionality.
  * Author: Whirl Sites
  * Author URI: http://www.whirlsites.com
- * Version: 1.1.1
+ * Version: 1.1.2
  */
  
 // GitHub Updates
@@ -29,6 +29,10 @@ if (is_admin()) { // note the use of is_admin() to double check that this is hap
     );
     new WP_GitHub_Updater($config);
 }
+
+// ACF Options Page
+
+acf_add_options_page();
 
 // Child Page Conditional
 

@@ -5,7 +5,7 @@
  * Description: This plugin is required for all Whirl Sites clients and adds special site functionality.
  * Author: Whirl Sites
  * Author URI: http://www.whirlsites.com
- * Version: 1.1.3
+ * Version: 1.1.4
  */
  
 // GitHub Updates
@@ -49,6 +49,26 @@ function is_subpage() {
     } else {                                   // there is no parent so ...
         return false;                          // ... the answer to the question is false
     }
+}
+
+add_action('admin_bar_menu', 'add_toolbar_items', 100);
+function add_toolbar_items($admin_bar){
+    $admin_bar->add_menu( array(
+        'id'    => 'widgets',
+        'title' => 'Sidebar Widgets',
+        'href'  => 'widgets.php',
+        'meta'  => array(
+            'title' => __('Sidebar Widgets'),            
+        ),
+    ));
+    $admin_bar->add_menu( array(
+        'id'    => 'navmenu',
+        'title' => 'Menu Editor',
+        'href'  => 'nav-menus.php',
+        'meta'  => array(
+            'title' => __('Menu Editor'),            
+        ),
+    ));
 }
 
 // Remove WordPress Version

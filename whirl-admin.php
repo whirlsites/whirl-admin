@@ -30,6 +30,11 @@ if (is_admin()) { // note the use of is_admin() to double check that this is hap
     new WP_GitHub_Updater($config);
 }
 
+add_action( 'init', 'stop_heartbeat', 1 );
+function stop_heartbeat() {
+wp_deregister_script('heartbeat');
+}
+
 // ACF Options Page
 
 if( function_exists('acf_add_options_page') ) {

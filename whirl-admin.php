@@ -35,6 +35,13 @@ function stop_heartbeat() {
 wp_deregister_script('heartbeat');
 }
 
+// Update Plugins
+
+add_filter( 'auto_update_plugin', '__return_true' );
+add_filter( 'allow_dev_auto_core_updates', '__return_true' );           // Enable development updates 
+add_filter( 'allow_minor_auto_core_updates', '__return_true' );         // Enable minor updates
+add_filter( 'allow_major_auto_core_updates', '__return_true' );         // Enable major updates
+
 // ACF Options Page
 
 if( function_exists('acf_add_options_page') ) {

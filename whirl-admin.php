@@ -5,7 +5,7 @@
  * Description: This plugin is required for all Whirl Sites clients and adds special site functionality.
  * Author: Whirl Sites
  * Author URI: http://www.whirlsites.com
- * Version: 1.1.4
+ * Version: 1.1.5
  */
  
 // GitHub Updates
